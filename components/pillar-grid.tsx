@@ -3,7 +3,7 @@ import { pillars } from "@/lib/pillars";
 
 export function PillarGrid() {
   return (
-    <section className="bg-forest px-4 py-16 text-white sm:px-6">
+    <section id="categories" className="bg-forest px-4 py-16 text-white sm:px-6">
       <div className="mx-auto max-w-6xl">
         <h2 className="text-center text-3xl font-extrabold">Equip Your Lifestyle</h2>
         <p className="mx-auto mt-3 max-w-2xl text-center text-white/75">

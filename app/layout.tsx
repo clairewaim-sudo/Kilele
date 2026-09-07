@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
-import { SiteSearchBar } from "@/components/site-search-bar";
+import { TrustBar } from "@/components/trust-bar";
 import { SiteFooter } from "@/components/site-footer";
 import { WhatsappButton } from "@/components/whatsapp-button";
 import { PostHogProvider } from "@/components/posthog-provider";
@@ -37,8 +37,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <body className="flex min-h-full flex-col">
         <PostHogProvider>
+          <TrustBar />
           <SiteHeader />
-          <SiteSearchBar />
           <main className="flex-1">{children}</main>
           <SiteFooter />
           <WhatsappButton />

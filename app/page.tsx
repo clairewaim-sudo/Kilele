@@ -23,6 +23,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
         title="Premium Outdoor Gear for the Kenyan Lifestyle"
         tagline={siteConfig.tagline}
         description="Kilele equips those who already live the outdoor life — camping, hiking, overlanding and portable power gear chosen for quality, not just price."
+        secondaryCta={{ label: "Explore Categories", href: "#categories" }}
       />
 
       {q && (

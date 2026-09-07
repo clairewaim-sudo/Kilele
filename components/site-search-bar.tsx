@@ -32,10 +32,10 @@ export function SiteSearchBar() {
   }
 
   return (
-    <div className="bg-forest-deep px-4 py-4 sm:px-6">
+    <div className="w-full">
       <form
         onSubmit={handleSubmit}
-        className="mx-auto flex max-w-3xl flex-col gap-3 sm:flex-row"
+        className="flex w-full flex-col gap-3 sm:flex-row"
       >
         <label htmlFor="site-search-input" className="sr-only">
           Search gear
@@ -68,7 +68,7 @@ export function SiteSearchBar() {
 
         <button
           type="submit"
-          className="rounded-full bg-sage px-6 py-3 font-semibold text-forest transition-colors hover:bg-sage-deep"
+          className="rounded-full bg-sage px-6 py-2.5 font-semibold text-forest transition-colors hover:bg-sage-deep sm:py-3"
         >
           Search
         </button>

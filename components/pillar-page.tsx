@@ -18,9 +18,10 @@ export function PillarPage({ pillar, highlightSlug }: { pillar: Pillar; highligh
         title={pillar.heroTitle}
         tagline={pillar.heroTagline}
         description={pillar.heroDescription}
+        secondaryCta={{ label: `Explore ${pillar.name}`, href: "#categories" }}
       />
 
-      <section className="bg-cream px-4 py-16 sm:px-6">
+      <section id="categories" className="bg-cream px-4 py-16 sm:px-6">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-3xl font-extrabold text-forest">{pillar.name} Categories</h2>
           <p className="mx-auto mt-3 max-w-2xl text-neutral-600">
