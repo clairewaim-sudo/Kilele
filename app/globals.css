@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand palette — carried across all four pillars (camping, hiking,
+     overlanding, portable power). Sourced from the founder's approved
+     design reference; adjust here if the brand kit changes and every
+     page picks it up automatically. */
+  --forest: #0f2b1d; /* primary dark green — headers, footers, hero */
+  --forest-deep: #0a2016; /* darker shade for gradients/overlays */
+  --sage: #c9e8d4; /* light mint-green — buttons, highlights */
+  --sage-deep: #a9d2ba; /* hover/active state for sage buttons */
+  --cream: #f3f7f3; /* off-white section background */
+  --whatsapp: #25d366; /* third-party brand color, kept as-is */
+
+  --background: var(--cream);
+  --foreground: var(--forest);
+}
+
+@theme inline {
+  --color-forest: var(--forest);
+  --color-forest-deep: var(--forest-deep);
+  --color-sage: var(--sage);
+  --color-sage-deep: var(--sage-deep);
+  --color-cream: var(--cream);
+  --color-whatsapp: var(--whatsapp);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-heading: var(--font-poppins);
+  --font-tagline: var(--font-playfair);
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
+}
