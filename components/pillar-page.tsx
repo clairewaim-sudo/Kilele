@@ -1,3 +1,4 @@
+import { Breadcrumbs } from "@/components/breadcrumbs";
 import { Hero } from "@/components/hero";
 import { SubcategoryList } from "@/components/subcategory-list";
 import { TrustBadges } from "@/components/trust-badges";
@@ -13,6 +14,13 @@ export function PillarPage({ pillar, highlightSlug }: { pillar: Pillar; highligh
 
   return (
     <>
+      <Breadcrumbs
+        items={[
+          { label: "Home", href: "/" },
+          { label: pillar.name, href: `/${pillar.slug}` },
+        ]}
+      />
+
       <Hero
         eyebrow={pillar.name}
         title={pillar.heroTitle}

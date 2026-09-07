@@ -24,9 +24,11 @@ app/
   portable-power/page.tsx Pillar page
   robots.ts          Generates /robots.txt
   sitemap.ts         Generates /sitemap.xml
+  opengraph-image.tsx Generates the default social-share image
 components/
   site-header.tsx, site-footer.tsx, whatsapp-button.tsx
   hero.tsx, pillar-grid.tsx, pillar-page.tsx, subcategory-list.tsx, trust-badges.tsx
+  breadcrumbs.tsx, json-ld.tsx, how-it-works.tsx, mountain-pattern.tsx
 lib/
   site.ts        Site-wide constants (name, domain, WhatsApp number)
   pillars.ts     The four category pillars + candidate subcategories (single source of truth)
@@ -49,13 +51,15 @@ The four pillars — **Camping, Hiking, Overlanding, Portable Power** — and th
 ## SEO groundwork already in place
 
 - Per-page `<title>`, meta description, and canonical URL (`lib/metadata.ts`)
-- Open Graph tags
+- Open Graph tags, plus a real OG image generated from code (`app/opengraph-image.tsx`, via Next's `next/og` — no external image needed)
 - `robots.txt` and `sitemap.xml` generated from the same pillar data (`app/robots.ts`, `app/sitemap.ts`)
+- Structured data (`components/json-ld.tsx`): sitewide Organization + WebSite JSON-LD, plus a BreadcrumbList on every pillar page that matches the visual breadcrumb trail exactly
+- Visual breadcrumbs on pillar pages (`components/breadcrumbs.tsx`), e.g. Home / Camping
 - Semantic heading hierarchy (one `<h1>` per page, `<h2>` for sections)
-- Fully static-generated pages (fast, good Core Web Vitals baseline)
 - Mobile-first, responsive layout
+- Keyboard accessibility: the header's category dropdowns open on keyboard focus (Tab), not just mouse hover
 
-Not yet done (intentionally, MVP scope): structured data (JSON-LD), breadcrumbs, image alt text (no real images yet), OG image assets — flagged for a later pass once real content/imagery exists.
+Not yet done (intentionally, MVP scope): image alt text (no real photography yet — see "Open decisions"). Homepage and pillar pages render dynamically (not statically) since they read the search query/highlight from the URL — still fast, just not build-time cached.
 
 ## Analytics (PostHog)
 

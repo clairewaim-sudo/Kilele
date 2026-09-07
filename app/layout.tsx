@@ -6,6 +6,7 @@ import { TrustBar } from "@/components/trust-bar";
 import { SiteFooter } from "@/components/site-footer";
 import { WhatsappButton } from "@/components/whatsapp-button";
 import { PostHogProvider } from "@/components/posthog-provider";
+import { JsonLd } from "@/components/json-ld";
 import { siteConfig } from "@/lib/site";
 
 const poppins = Poppins({
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${poppins.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
+        <JsonLd />
         <PostHogProvider>
           <TrustBar />
           <SiteHeader />

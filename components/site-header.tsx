@@ -30,7 +30,7 @@ export function SiteHeader() {
             <div key={pillar.slug} className="group relative">
               <Link
                 href={`/${pillar.slug}`}
-                className="inline-flex items-center gap-1 px-4 py-3 text-sm font-medium text-white/90 transition-colors hover:text-sage"
+                className="inline-flex items-center gap-1 px-4 py-3 text-sm font-medium text-white/90 outline-none transition-colors hover:text-sage focus-visible:text-sage focus-visible:underline"
               >
                 {pillar.shortName}
                 <span aria-hidden="true" className="text-xs">
@@ -38,7 +38,7 @@ export function SiteHeader() {
                 </span>
               </Link>
 
-              <div className="invisible absolute left-0 top-full z-20 min-w-[220px] rounded-b-lg bg-white py-2 opacity-0 shadow-lg transition-opacity duration-150 pointer-events-none group-hover:visible group-hover:opacity-100 group-hover:pointer-events-auto">
+              <div className="invisible absolute left-0 top-full z-20 min-w-[220px] rounded-b-lg bg-white py-2 opacity-0 shadow-lg transition-opacity duration-150 pointer-events-none group-hover:visible group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:visible group-focus-within:opacity-100 group-focus-within:pointer-events-auto">
                 {pillar.subcategories.map((sub) => (
                   <Link
                     key={sub.slug}
