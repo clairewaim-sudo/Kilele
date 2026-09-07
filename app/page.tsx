@@ -1,5 +1,6 @@
 import { Hero } from "@/components/hero";
 import { PillarGrid } from "@/components/pillar-grid";
+import { HowItWorks } from "@/components/how-it-works";
 import { TrustBadges } from "@/components/trust-badges";
 import { buildMetadata } from "@/lib/metadata";
 import { siteConfig, whatsappLink } from "@/lib/site";
@@ -44,6 +45,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
       )}
 
       <PillarGrid />
+      <HowItWorks />
       <TrustBadges />
     </>
   );

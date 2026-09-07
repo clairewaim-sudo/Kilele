@@ -6,13 +6,13 @@ import { siteConfig } from "@/lib/site";
 
 export function SiteHeader() {
   return (
-    <header className="border-b-2 border-forest bg-cream text-forest">
+    <header className="bg-forest text-white">
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-4 sm:px-6 md:flex-row md:items-center md:gap-6">
         <Link
           href="/"
           className="flex shrink-0 items-center gap-2 text-xl font-extrabold tracking-tight"
         >
-          <Logo size={36} variant="dark" />
+          <Logo size={36} variant="light" />
           {siteConfig.name.toUpperCase()}
         </Link>
 
@@ -23,14 +23,14 @@ export function SiteHeader() {
 
       <nav
         aria-label="Main navigation"
-        className="hidden border-t border-forest/15 md:block"
+        className="hidden border-t border-white/10 bg-forest-deep md:block"
       >
         <div className="mx-auto flex max-w-6xl gap-2 px-4 sm:px-6">
           {pillars.map((pillar) => (
             <div key={pillar.slug} className="group relative">
               <Link
                 href={`/${pillar.slug}`}
-                className="inline-flex items-center gap-1 px-4 py-3 text-sm font-medium text-forest/90 transition-colors hover:text-forest"
+                className="inline-flex items-center gap-1 px-4 py-3 text-sm font-medium text-white/90 transition-colors hover:text-sage"
               >
                 {pillar.shortName}
                 <span aria-hidden="true" className="text-xs">
@@ -43,8 +43,9 @@ export function SiteHeader() {
                   <Link
                     key={sub.slug}
                     href={`/${pillar.slug}?sub=${sub.slug}`}
-                    className="block px-4 py-2 text-sm text-forest hover:bg-cream"
+                    className="flex items-center gap-2 px-4 py-2 text-sm text-forest hover:bg-cream"
                   >
+                    <span aria-hidden="true">{sub.icon}</span>
                     {sub.name}
                   </Link>
                 ))}

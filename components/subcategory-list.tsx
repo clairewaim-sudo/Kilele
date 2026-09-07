@@ -24,10 +24,11 @@ export function SubcategoryList({
             key={sub.slug}
             className={
               isHighlighted
-                ? "rounded-full border border-sage bg-sage px-4 py-2 text-sm font-semibold text-forest"
-                : "rounded-full border border-forest/15 bg-white px-4 py-2 text-sm font-medium text-forest"
+                ? "flex items-center gap-2 rounded-full border border-sage bg-sage px-4 py-2 text-sm font-semibold text-forest"
+                : "flex items-center gap-2 rounded-full border border-forest/15 bg-white px-4 py-2 text-sm font-medium text-forest"
             }
           >
+            <span aria-hidden="true">{sub.icon}</span>
             {sub.name}
           </li>
         );

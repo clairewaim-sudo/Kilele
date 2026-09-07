@@ -17,7 +17,10 @@ export function PillarGrid() {
               href={`/${pillar.slug}`}
               className="group rounded-2xl border border-forest/15 bg-white p-6 shadow-sm transition-colors hover:border-forest"
             >
-              <h3 className="text-xl font-bold text-forest">{pillar.name}</h3>
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sage text-2xl">
+                <span aria-hidden="true">{pillar.icon}</span>
+              </div>
+              <h3 className="mt-4 text-xl font-bold text-forest">{pillar.name}</h3>
               <p className="mt-2 text-sm text-neutral-600">
                 {pillar.subcategories.slice(0, 3).map((s) => s.name).join(" · ")}
               </p>

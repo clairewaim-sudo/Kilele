@@ -11,12 +11,14 @@
 export type Subcategory = {
   name: string;
   slug: string;
+  icon: string;
 };
 
 export type Pillar = {
   slug: string;
   name: string;
   shortName: string;
+  icon: string;
   heroTitle: string;
   heroTagline: string;
   heroDescription: string;
@@ -30,6 +32,7 @@ export const pillars: Pillar[] = [
     slug: "camping",
     name: "Camping",
     shortName: "Camping",
+    icon: "⛺",
     heroTitle: "Premium Camping Gear for Kenya",
     heroTagline: "The Summit Starts Here.",
     heroDescription:
@@ -38,22 +41,23 @@ export const pillars: Pillar[] = [
     metaDescription:
       "Discover premium camping gear for Kenya — tents, sleeping bags, chairs, lighting and cooking equipment. Kilele equips the outdoor lifestyle.",
     subcategories: [
-      { name: "Camping Tents", slug: "tents" },
-      { name: "Family Tents", slug: "family-tents" },
-      { name: "Sleeping Bags", slug: "sleeping-bags" },
-      { name: "Camping Chairs", slug: "chairs" },
-      { name: "Camping Tables", slug: "tables" },
-      { name: "Camping Lighting", slug: "lighting" },
-      { name: "Camp Cooking Equipment", slug: "cooking" },
-      { name: "Camping Coolers", slug: "coolers" },
-      { name: "Camping Mattresses", slug: "mattresses" },
-      { name: "Camping Power", slug: "power" },
+      { name: "Camping Tents", slug: "tents", icon: "⛺" },
+      { name: "Family Tents", slug: "family-tents", icon: "🏕️" },
+      { name: "Sleeping Bags", slug: "sleeping-bags", icon: "🛏️" },
+      { name: "Camping Chairs", slug: "chairs", icon: "🪑" },
+      { name: "Camping Tables", slug: "tables", icon: "🍽️" },
+      { name: "Camping Lighting", slug: "lighting", icon: "🔦" },
+      { name: "Camp Cooking Equipment", slug: "cooking", icon: "🍳" },
+      { name: "Camping Coolers", slug: "coolers", icon: "🧊" },
+      { name: "Camping Mattresses", slug: "mattresses", icon: "🛌" },
+      { name: "Camping Power", slug: "power", icon: "🔌" },
     ],
   },
   {
     slug: "hiking",
     name: "Hiking",
     shortName: "Hiking",
+    icon: "🥾",
     heroTitle: "Premium Hiking Gear in Nairobi",
     heroTagline: "The Summit Starts Here.",
     heroDescription:
@@ -62,19 +66,20 @@ export const pillars: Pillar[] = [
     metaDescription:
       "Shop premium hiking gear for Kenya's trails and mountains — boots, backpacks, trekking poles and hydration. Trail-tested, genuine gear only.",
     subcategories: [
-      { name: "Hiking Boots", slug: "boots" },
-      { name: "Hiking Shoes", slug: "shoes" },
-      { name: "Hiking Backpacks", slug: "backpacks" },
-      { name: "Trekking Poles", slug: "trekking-poles" },
-      { name: "Hiking Clothing", slug: "clothing" },
-      { name: "Hydration", slug: "hydration" },
-      { name: "Hiking Accessories", slug: "accessories" },
+      { name: "Hiking Boots", slug: "boots", icon: "🥾" },
+      { name: "Hiking Shoes", slug: "shoes", icon: "👟" },
+      { name: "Hiking Backpacks", slug: "backpacks", icon: "🎒" },
+      { name: "Trekking Poles", slug: "trekking-poles", icon: "🥢" },
+      { name: "Hiking Clothing", slug: "clothing", icon: "🧥" },
+      { name: "Hydration", slug: "hydration", icon: "💧" },
+      { name: "Hiking Accessories", slug: "accessories", icon: "🧭" },
     ],
   },
   {
     slug: "overlanding",
     name: "Overlanding",
     shortName: "Overlanding",
+    icon: "🚙",
     heroTitle: "Overlanding & 4x4 Camping Gear",
     heroTagline: "The Summit Starts Here.",
     heroDescription:
@@ -83,19 +88,20 @@ export const pillars: Pillar[] = [
     metaDescription:
       "Overlanding and 4x4 camping gear for Kenya — rooftop tents, vehicle storage, camp kitchens and recovery equipment for the road less tarmacked.",
     subcategories: [
-      { name: "Rooftop Tents", slug: "rooftop-tents" },
-      { name: "4x4 Camping", slug: "4x4-camping" },
-      { name: "Overlanding Gear", slug: "gear" },
-      { name: "Vehicle Camping Equipment", slug: "vehicle-camping" },
-      { name: "Storage", slug: "storage" },
-      { name: "Camp Kitchens", slug: "camp-kitchens" },
-      { name: "Recovery Equipment", slug: "recovery" },
+      { name: "Rooftop Tents", slug: "rooftop-tents", icon: "⛺" },
+      { name: "4x4 Camping", slug: "4x4-camping", icon: "🚙" },
+      { name: "Overlanding Gear", slug: "gear", icon: "🧰" },
+      { name: "Vehicle Camping Equipment", slug: "vehicle-camping", icon: "🚐" },
+      { name: "Storage", slug: "storage", icon: "📦" },
+      { name: "Camp Kitchens", slug: "camp-kitchens", icon: "🍳" },
+      { name: "Recovery Equipment", slug: "recovery", icon: "🛠️" },
     ],
   },
   {
     slug: "portable-power",
     name: "Portable Power",
     shortName: "Portable Power",
+    icon: "🔋",
     heroTitle: "Portable Power for the Outdoors",
     heroTagline: "The Summit Starts Here.",
     heroDescription:
@@ -104,10 +110,10 @@ export const pillars: Pillar[] = [
     metaDescription:
       "Portable power stations and solar generators for camping and off-grid living in Kenya. Reliable power for every outdoor trip.",
     subcategories: [
-      { name: "Portable Power Stations", slug: "power-stations" },
-      { name: "Solar Generators", slug: "solar-generators" },
-      { name: "Portable Solar Panels", slug: "solar-panels" },
-      { name: "Camping Power Solutions", slug: "camping-power" },
+      { name: "Portable Power Stations", slug: "power-stations", icon: "🔋" },
+      { name: "Solar Generators", slug: "solar-generators", icon: "☀️" },
+      { name: "Portable Solar Panels", slug: "solar-panels", icon: "🔆" },
+      { name: "Camping Power Solutions", slug: "camping-power", icon: "🔌" },
     ],
   },
 ];
