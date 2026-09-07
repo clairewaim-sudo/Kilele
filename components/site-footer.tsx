@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Logo } from "@/components/logo";
 import { pillars } from "@/lib/pillars";
 import { siteConfig } from "@/lib/site";
 
@@ -10,7 +11,10 @@ export function SiteFooter() {
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
           <div>
-            <p className="text-lg font-extrabold">{siteConfig.name.toUpperCase()}</p>
+            <div className="flex items-center gap-2">
+              <Logo size={28} variant="light" />
+              <p className="text-lg font-extrabold">{siteConfig.name.toUpperCase()}</p>
+            </div>
             <p className="mt-2 text-sm text-white/70">{siteConfig.tagline}</p>
           </div>
           <div>

@@ -43,6 +43,7 @@ The four pillars — **Camping, Hiking, Overlanding, Portable Power** — and th
 
 - **Colors** (`app/globals.css`): deep forest green (`--forest`), light sage/mint (`--sage`), off-white cream (`--cream`). Approximated from the founder's design reference (a screenshot of an existing prototype) — see "Open decisions" below.
 - **Typography**: Poppins (headings + body) and Playfair Display Italic (taglines only), loaded via `next/font/google` — self-hosted automatically by Next.js, no external font requests.
+- **Logo** (`components/logo.tsx`): a compass-ring "K" mark — recreated as inline SVG from the founder's reference image (a raster upload can't be pulled out of the chat directly, so it's rebuilt as vector artwork instead, which is actually the better format: crisp at any size, tiny file weight, works as a favicon source). Used in the header, footer, and as the site favicon (`app/icon.svg`, `app/apple-icon.png`). Re-run `node scripts/generate-favicons.mjs` if the brand colors ever change.
 - Design system is shared across all four pillars (one visual identity, pillar-specific copy) per the founder's decision.
 
 ## SEO groundwork already in place
@@ -65,10 +66,13 @@ npm run build     # production build
 npm run lint
 ```
 
+## Resolved decisions
+
+- **WhatsApp Business number**: set to `254789682267` in `lib/site.ts`.
+- **Domain**: confirmed as `outdoorgear.ke`, already the default in `lib/site.ts`.
+- **Logo**: the compass-ring "K" mark is implemented (see Brand system above).
+
 ## Open decisions for the founder
 
-1. **Exact brand colors/fonts** — current values in `app/globals.css` are my closest-match estimate from a screenshot of the reference prototype. If you can share the actual CSS/Tailwind config from that build, I'll swap in the exact values.
-2. **WhatsApp Business number** — `lib/site.ts` has a placeholder (`254700000000`). Needs the real number before this goes live.
-3. **Domain** — `lib/site.ts` defaults to `https://outdoorgear.ke`; can be overridden via the `NEXT_PUBLIC_SITE_URL` environment variable until the domain is connected.
-4. **Logo/favicon** — still using the default Next.js favicon. Needs the real Kilele mark.
-5. **Real photography** — no images are used yet (no fabricated product photos). Hero sections are text-only until real photography is available.
+1. **Exact brand colors** — current values in `app/globals.css` are my closest-match estimate from a screenshot of the reference prototype. If you can share the actual CSS/Tailwind config from that build, I'll swap in the exact values.
+2. **Photography** — the founder asked for AI-generated photography, but this development environment has no image-generation tool available to me, so I can't produce photos directly. Options: (a) generate images yourself with an AI image tool and send me the files to place in `public/images`, (b) I use licensed stock photography as placeholders until real/AI imagery is ready, or (c) keep hero sections text-only (current state) a while longer. Let me know which you'd prefer — no fabricated/fake product photos will be used regardless.

@@ -10,8 +10,7 @@ export const siteConfig = {
     "Kilele equips the Kenyan outdoor lifestyle — premium camping, hiking, overlanding and portable power gear for those who already live it.",
   // TODO(founder): replace with the live domain once outdoorgear.ke is connected.
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://outdoorgear.ke",
-  // TODO(founder): replace with the real WhatsApp Business number (international format, no + or spaces).
-  whatsappNumber: "254700000000",
+  whatsappNumber: "254789682267",
   whatsappMessage: "Hi Kilele, I'd like to ask about your gear.",
 } as const;
 
