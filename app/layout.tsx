@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteSearchBar } from "@/components/site-search-bar";
 import { SiteFooter } from "@/components/site-footer";
 import { WhatsappButton } from "@/components/whatsapp-button";
+import { PostHogProvider } from "@/components/posthog-provider";
 import { siteConfig } from "@/lib/site";
 
 const poppins = Poppins({
@@ -35,11 +36,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${poppins.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
-        <SiteHeader />
-        <SiteSearchBar />
-        <main className="flex-1">{children}</main>
-        <SiteFooter />
-        <WhatsappButton />
+        <PostHogProvider>
+          <SiteHeader />
+          <SiteSearchBar />
+          <main className="flex-1">{children}</main>
+          <SiteFooter />
+          <WhatsappButton />
+        </PostHogProvider>
       </body>
     </html>
   );

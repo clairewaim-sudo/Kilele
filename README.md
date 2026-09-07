@@ -57,6 +57,16 @@ The four pillars — **Camping, Hiking, Overlanding, Portable Power** — and th
 
 Not yet done (intentionally, MVP scope): structured data (JSON-LD), breadcrumbs, image alt text (no real images yet), OG image assets — flagged for a later pass once real content/imagery exists.
 
+## Analytics (PostHog)
+
+PostHog is wired in but **disabled until you provide a project key** (`components/posthog-provider.tsx`) — it's a no-op if `NEXT_PUBLIC_POSTHOG_KEY` isn't set, so this is safe to leave as-is. To enable it:
+
+1. Create a project at [posthog.com](https://posthog.com) (or use an existing one).
+2. Copy `.env.local.example` to `.env.local` and fill in `NEXT_PUBLIC_POSTHOG_KEY` and `NEXT_PUBLIC_POSTHOG_HOST` from Project Settings → API keys.
+3. Add the same two variables in your hosting provider's environment settings when you deploy.
+
+It tracks pageviews automatically (including client-side navigations, since Next.js App Router doesn't do full page loads). No session replay or feature flags are set up — easy to add later if you want them.
+
 ## Running locally
 
 ```bash
