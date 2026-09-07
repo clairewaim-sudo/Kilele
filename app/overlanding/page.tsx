@@ -10,6 +10,11 @@ export const metadata = buildMetadata({
   path: "/overlanding",
 });
 
-export default function OverlandingPage() {
-  return <PillarPage pillar={pillar} />;
+export default async function OverlandingPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ sub?: string }>;
+}) {
+  const { sub } = await searchParams;
+  return <PillarPage pillar={pillar} highlightSlug={sub} />;
 }

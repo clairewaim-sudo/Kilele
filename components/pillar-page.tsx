@@ -8,7 +8,9 @@ import type { Pillar } from "@/lib/pillars";
  * portable power). Keeping this in one place means the four pillar pages
  * stay visually consistent — one design system, pillar-specific copy.
  */
-export function PillarPage({ pillar }: { pillar: Pillar }) {
+export function PillarPage({ pillar, highlightSlug }: { pillar: Pillar; highlightSlug?: string }) {
+  const highlighted = pillar.subcategories.find((s) => s.slug === highlightSlug);
+
   return (
     <>
       <Hero
@@ -22,11 +24,22 @@ export function PillarPage({ pillar }: { pillar: Pillar }) {
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-3xl font-extrabold text-forest">{pillar.name} Categories</h2>
           <p className="mx-auto mt-3 max-w-2xl text-neutral-600">
-            Our {pillar.name.toLowerCase()} range is growing. Here&apos;s what we&apos;re building
-            towards — chat to us on WhatsApp if you&apos;re after something specific today.
+            {highlighted ? (
+              <>
+                You searched for <strong>{highlighted.name}</strong> — here&apos;s our{" "}
+                {pillar.name.toLowerCase()} range. Chat to us on WhatsApp if you&apos;re after
+                something specific today.
+              </>
+            ) : (
+              <>
+                Our {pillar.name.toLowerCase()} range is growing. Here&apos;s what we&apos;re
+                building towards — chat to us on WhatsApp if you&apos;re after something specific
+                today.
+              </>
+            )}
           </p>
           <div className="mt-8">
-            <SubcategoryList subcategories={pillar.subcategories} />
+            <SubcategoryList subcategories={pillar.subcategories} highlightSlug={highlightSlug} />
           </div>
         </div>
       </section>

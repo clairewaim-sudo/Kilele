@@ -10,6 +10,11 @@ export const metadata = buildMetadata({
   path: "/portable-power",
 });
 
-export default function PortablePowerPage() {
-  return <PillarPage pillar={pillar} />;
+export default async function PortablePowerPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ sub?: string }>;
+}) {
+  const { sub } = await searchParams;
+  return <PillarPage pillar={pillar} highlightSlug={sub} />;
 }

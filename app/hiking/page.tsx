@@ -10,6 +10,11 @@ export const metadata = buildMetadata({
   path: "/hiking",
 });
 
-export default function HikingPage() {
-  return <PillarPage pillar={pillar} />;
+export default async function HikingPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ sub?: string }>;
+}) {
+  const { sub } = await searchParams;
+  return <PillarPage pillar={pillar} highlightSlug={sub} />;
 }
