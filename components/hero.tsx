@@ -26,7 +26,7 @@ export function Hero({ eyebrow, title, tagline, description, secondaryCta }: Her
             href={whatsappLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-sage px-6 py-3 font-semibold text-forest transition-colors hover:bg-sage-deep"
+            className="flex min-h-[52px] w-full items-center justify-center rounded-full bg-whatsapp px-6 font-semibold text-white transition-[filter] hover:brightness-90 sm:w-auto"
           >
             Start a WhatsApp Chat
           </Link>

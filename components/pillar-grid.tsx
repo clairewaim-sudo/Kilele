@@ -10,14 +10,14 @@ export function PillarGrid() {
           Four pillars of the same outdoor life — pick where your next trip takes you.
         </p>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid grid-cols-1 gap-6 min-[640px]:max-[719px]:grid-cols-2 min-[720px]:grid-cols-4">
           {pillars.map((pillar) => (
             <Link
               key={pillar.slug}
               href={`/${pillar.slug}`}
-              className="group rounded-2xl border border-forest/15 bg-white p-6 shadow-sm transition-colors hover:border-forest"
+              className="group flex min-h-[200px] flex-col items-center rounded-2xl border border-forest/15 bg-white p-6 text-center shadow-sm transition-colors hover:border-forest"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sage text-2xl">
+              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-sage text-2xl">
                 <span aria-hidden="true">{pillar.icon}</span>
               </div>
               <h3 className="mt-4 text-xl font-bold text-forest">{pillar.name}</h3>
